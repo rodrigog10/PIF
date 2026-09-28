@@ -1,0 +1,25 @@
+Questão 02. Especificadores de Formato, Sequências de Escape e Erros de Compilação (Cap. 1)
+
+— Um estudante iniciante escreveu o código C abaixo tentando imprimir mensagens formatadas com
+quebras de linha e tabulações, mas enfrentou erros de compilação. Identifique os três erros
+sintáticos/estruturais presentes no código:
+
+
+#include <stdio.h>
+#include <stdlib.h>;
+int Main()
+{
+int idade = 20;
+printf( A idade do aluno eh: %d anos.. , idade);
+
+cout << endl;
+
+system("PAUSE");
+return 0;
+
+}
+
+Resposta: Os erros que indentifiquei foi:
+   1 - main com M maiusculo
+   2 - inexistência das aspas no printf
+   3 - sinais duplos no cout "<<" endl;, pelo que eu saiba esse sinal é exclusivo do C++ acredito eu.

@@ -1,0 +1,14 @@
+Questão 01. Sensibilidade a Caixa (Case Sensitivity) e Identificadores em C (Cap. 1) — A linguagem
+C diferencia rigorosamente letras maiúsculas e minúsculas na formação de nomes de identificadores e
+palavras-chave. Com base nessa premissa, analise os pares de identificadores abaixo e assinale a
+alternativa correta:
+a) Os nomes de variáveis 'numero' e 'Numero' referenciam o mesmo endereço de memória.
+b) A palavra-chave 'Main' com 'M' maiúsculo é reconhecida pelo compilador como ponto de entrada
+válido.
+c) Todos os pares de nomes ('valor'/'VALOR', 'peso'/'Peso', 'taxa'/'TAXA') representam identificadores
+totalmente distintos para o compilador.
+d) A sensibilidade a caixa baixa/alta depende exclusivamente do sistema operacional utilizado na
+compilação.
+
+
+Resposta: Letra C

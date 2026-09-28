@@ -1,0 +1,44 @@
+Questão 03. Operadores de Atribuição Composta e Avaliação Sequencial (Cap. 2)
+
+— Os operadores de atribuição em C executam suas ações da direita para a esquerda e podem ser
+combinados com operadores aritméticos. Determine os valores finais de a, b, c e d após a execução da
+sequência abaixo:
+
+int a = 2, b = 4, c = 5, d = 10;
+
+a += b + c; // Valor final de a = ?
+
+b *= c = d - 2; // Valores finais de b e c = ?
+
+d %= a + 3; // Valor final de d = ?
+
+a += b += c += 5; // Valores finais de a, b e c = ?
+
+Resposta:
+    é em sequencia, então:
+
+   1°a sequencia:
+
+   a = a + b + c = 11,
+
+       a = 11, b = 4, c = 5, d = 10
+
+   2°a sequencia:
+
+   b = 4 * c, d - 2, então b = 4 * 8 = 32
+
+        a = 11, b = 32, c = 8, d = 10
+
+   3°a sequencia:
+
+        d = 10 % 14 é resto 0.
+
+        a = 11, b = 32, c = 8, d = 10.
+
+   4°a sequencia:
+
+        a += b += c += 5; fica a = a + b, b = b + c e c = c + 5, ou seja:
+
+           a = 56, b = 45, c = 13
+
+

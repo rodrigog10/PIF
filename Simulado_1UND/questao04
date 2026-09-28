@@ -1,0 +1,36 @@
+Questão 04. Avaliação de Expressões Lógicas, Relacionais e Precedência (Cap. 2)
+
+— Considere as variáveis inteiras
+
+    i = 2,
+    j = 3,
+    k = 0
+
+    e as variáveis de ponto flutuante
+    x = 2.5,
+    y = 5.0.
+
+    Avalie cada expressão abaixo e determine seu resultado lógico em C (1 para Verdadeiro, 0 para Falso):
+
+
+    a) i < j + 2 => Resultado: 1
+    b) 2 * i - 5 <= j - 4 => Resultado: ?
+    c) !k && (x + y >= 7.5) => Resultado: ?
+    d) !(i == j) || (y / x == 2.0) => Resultado: ?
+    e) i == 2 && j == 4 || k == 0 => Resultado: ?
+
+    Respostas:
+
+        a) 1 porque 2 é menor que 5.
+        b) (-1 <= -1) verdadeiro, 1.
+        c) 1, explicação:
+
+            -> inicialmente é designado que k é falso (0). Se negar o falso (!) fica verdadeiro, então:
+                -> 1 (V) && (7.5 >= 7.5 (V) ), ou seja V && V = V, então a resposta é 1.
+
+        d) 1, explicação:
+
+            -> separando, fica: (V OU V = V), porque:
+                -> !(i == j) é !(2 == 3), dentro do parenteses é falso porém ele nega o falso, virando verdadeiro.
+                -> (5.0 / 2.5 == 2) verdadeiro.
+
