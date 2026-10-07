@@ -1,0 +1,42 @@
+Questão 11.
+
+Cálculo Salarial com Gratificação e Impostos —
+
+Uma empresa contrata um técnico a R$ 45,00 por dia trabalhado.
+Crie um programa em C que solicite o número de dias trabalhados, calcule o
+salário bruto, adicione uma gratificação de 5% sobre o bruto e desconte 8% de imposto de renda
+sobre o bruto. Ao final, exiba o holerite detalhado com o valor líquido a receber.
+
+#include <stdio.h>
+
+int main() {
+    int dias_trabalhados;
+    double salario_bruto, gratificacao, imposto, salario_liquido;
+    const double VALOR_DIARIA = 45.00;
+
+    // Solicita o número de dias trabalhados
+    printf("Digite o número de dias trabalhados pelo técnico: ");
+    scanf("%d", &dias_trabalhados);
+
+    // Cálculos salariais
+    salario_bruto = dias_trabalhados * VALOR_DIARIA;
+    gratificacao = salario_bruto * 0.05; // 5% de gratificação sobre o bruto
+    imposto = salario_bruto * 0.08;      // 8% de imposto de renda sobre o bruto
+    salario_liquido = salario_bruto + gratificacao - imposto;
+
+    // Exibição do holerite detalhado
+    printf("\n=========================================\n");
+    printf("           HOLERITE DETALHADO            \n");
+    printf("=========================================\n");
+    printf("Dias trabalhados:      %d dias\n", dias_trabalhados);
+    printf("Valor da diária:       R$ %.2f\n", VALOR_DIARIA);
+    printf("-----------------------------------------\n");
+    printf("(+) Salário Bruto:     R$ %.2f\n", salario_bruto);
+    printf("(+) Gratificação (5%%): R$ %.2f\n", gratificacao);
+    printf("(-) Imposto Renda (8%%):R$ %.2f\n", imposto);
+    printf("-----------------------------------------\n");
+    printf("(=) VALOR LÍQUIDO:     R$ %.2f\n", salario_liquido);
+    printf("=========================================\n");
+
+    return 0;
+}

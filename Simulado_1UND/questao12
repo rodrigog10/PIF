@@ -1,0 +1,32 @@
+Questão 12.
+
+Validação de Entrada de Dados com Laço Garantido (`do-while`) —
+
+Escreva um programa em C que solicite ao usuário uma nota válida no intervalo fechado de 0.0 a 10.0. Caso o
+usuário digite um valor inválido (como -2.5 ou 11.0), o programa deve exibir uma mensagem de erro e
+repetir a solicitação utilizando a estrutura `do-while`. O programa só deve encerrar quando uma nota
+válida for digitada.
+
+
+#include <stdio.h>
+
+int main() {
+    double nota;
+
+    // Laço garantido que executa pelo menos uma vez
+    do {
+        printf("Digite uma nota (entre 0.0 e 10.0): ");
+        scanf("%lf", &nota);
+
+        // Verifica se a nota está fora do intervalo permitido
+        if (nota < 0.0 || nota > 10.0) {
+            printf("Erro: Nota inválida! Tente novamente.\n\n");
+        }
+
+    } while (nota < 0.0 || nota > 10.0); // Repete enquanto a nota for inválida
+
+    // Exibição da nota aceita com sucesso
+    printf("\nNota %.1f gravada com sucesso! Programa encerrado.\n", nota);
+
+    return 0;
+}

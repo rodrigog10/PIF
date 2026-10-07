@@ -1,0 +1,46 @@
+Questão 15.
+
+Geração de Padrões Visuais com Laços Aninhados: Triângulo de Floyd —
+
+Escreva um programa em C que leia um número inteiro positivo N e imprima N linhas do **Triângulo de Floyd**
+utilizando laços aninhados. Por exemplo, para N = 5, a saída no console deve ser exatamente:
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    int numero = 1; // Contador que será impresso e incrementado constantemente
+
+    // Solicita o número de linhas N ao usuário
+    printf("Digite o número de linhas (N) para o Triângulo de Floyd: ");
+    scanf("%d", &n);
+
+    // Validação simples para garantir que N seja positivo
+    if (n <= 0) {
+        printf("Por favor, digite um número inteiro positivo maior que zero.\n");
+        return 1;
+    }
+
+    printf("\n--- Triângulo de Floyd (N = %d) ---\n\n", n);
+
+    // Laço externo: controla qual linha está sendo impressa (de 1 até N)
+    for (int i = 1; i <= n; i++) {
+
+        // Laço interno: controla quantos números aparecem na linha 'i'
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", numero);
+            numero++; // Avança para o próximo número da sequência
+        }
+
+        // Pula para a próxima linha do console após terminar a linha atual
+        printf("\n");
+    }
+
+    return 0;
+}

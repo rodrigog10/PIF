@@ -1,0 +1,37 @@
+Questão 9.
+
+Geometria do Triângulo e Fórmula de Heron —
+
+Escreva um programa em C que leia os comprimentos dos três lados (a, b, c) de um triângulo qualquer. Sabendo que
+o semiperímetro p é dadopor (a + b + c) / 2.0, calcule a área do triângulo utilizando a
+**Fórmula de Heron**: Area = sqrt(p * (p -a) * (p - b) * (p - c)). Utilize a função sqrt() da biblioteca `<math.h>`.
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a, b, c, p, area;
+
+    // Leitura dos três lados do triângulo
+    printf("Digite o comprimento do lado a: ");
+    scanf("%lf", &a);
+
+    printf("Digite o comprimento do lado b: ");
+    scanf("%lf", &b);
+
+    printf("Digite o comprimento do lado c: ");
+    scanf("%lf", &c);
+
+    // Cálculo do semiperímetro (p)
+    p = (a + b + c) / 2.0;
+
+    // Cálculo da área utilizando a Fórmula de Heron e a função sqrt()
+    area = sqrt(p * (p - a) * (p - b) * (p - c));
+
+    // Exibição do resultado formatado
+    printf("\n--- Resultado ---\n");
+    printf("O semiperímetro do triângulo é: %.2f\n", p);
+    printf("A área do triângulo é: %.4f\n", area);
+
+    return 0;
+}

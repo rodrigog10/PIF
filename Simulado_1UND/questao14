@@ -1,0 +1,45 @@
+Questão 14.
+
+Autenticação de Senha com Limite Finito de Tentativas —
+
+Desenvolva um sistema de autenticação que defina uma senha numérica secreta (ex: 2026). O programa deve permitir que o
+usuário tente digitar a senha no máximo 3 vezes usando um laço `while` ou `for`. Se acertar, exiba
+'Acesso Concedido!' e encerre; se errar as 3 vezes, exiba 'Conta Bloqueada por Segurança!'.
+
+
+#include <stdio.h>
+
+int main() {
+    const int SENHA_SECRETA = 2026;
+    int senha_digitada;
+    int tentativas = 0;
+    int acesso_concedido = 0; // Variável de controle (0 para falso, 1 para verdadeiro)
+
+    // Laço permite no máximo 3 tentativas
+    while (tentativas < 3) {
+        printf("Digite a senha numérica (Tentativa %d de 3): ", tentativas + 1);
+        scanf("%d", &senha_digitada);
+
+        tentativas++; // Incrementa o número de tentativas feitas
+
+        if (senha_digitada == SENHA_SECRETA) {
+            acesso_concedido = 1;
+            break; // Interrompe o laço imediatamente se acertar
+        } else {
+            printf("Senha incorreta!\n\n");
+        }
+    }
+
+    // Verificação final após sair do laço
+    if (acesso_concedido) {
+        printf("=========================================\n");
+        printf("           ACESSO CONCEDIDO!             \n");
+        printf("=========================================\n");
+    } else {
+        printf("=========================================\n");
+        printf("      CONTA BLOQUEADA POR SEGURANÇA!     \n");
+        printf("=========================================\n");
+    }
+
+    return 0;
+}

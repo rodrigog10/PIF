@@ -1,0 +1,36 @@
+Questão 10.
+
+Resto da Divisão (`%`) e Decomposição do Tempo —
+
+Desenvolva um programa em C que receba uma quantidade inteira de segundos informada pelo usuário.
+O programa deve calcular e exibir o tempo equivalente decomposto em Horas, Minutos e Segundos restantes (Exemplo: 3665
+segundos correspondem a 1 hora, 1 minuto e 5 segundos).
+
+#include <stdio.h>
+
+int main() {
+    int total_segundos, horas, minutos, segundos_restantes;
+
+    // Solicita a quantidade total de segundos
+    printf("Digite a quantidade total de segundos: ");
+    scanf("%d", &total_segundos);
+
+    // 1 hora = 3600 segundos
+    horas = total_segundos / 3600;
+
+    // O resto da divisão por 3600 são os segundos que não completaram 1 hora
+    int resto_segundos = total_segundos % 3600;
+
+    // 1 minuto = 60 segundos
+    minutos = resto_segundos / 60;
+
+    // O resto da divisão por 60 são os segundos finais restantes
+    segundos_restantes = resto_segundos % 60;
+
+    // Exibe o resultado decomposto
+    printf("\n--- Tempo Decomposto ---\n");
+    printf("%d segundos correspondem a: %d hora(s), %d minuto(s) e %d segundo(s).\n",
+           total_segundos, horas, minutos, segundos_restantes);
+
+    return 0;
+}

@@ -1,0 +1,34 @@
+Questão 13.
+
+Cálculo do Fatorial com Tratamento do Zero e Tipo `long long int` —
+
+Escreva um programa em C que solicite um número inteiro N e calcule o seu fatorial (N!). Lembre-se que 0! = 1 e 1!
+= 1. O programa deve utilizar a variável do resultado como `long long int` com o especificador `%lld`
+para evitar estouro de memória e tratar entradas inválidas (números negativos).
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    long long int fatorial = 1;
+
+    // Solicita o número inteiro N ao usuário
+    printf("Digite um número inteiro não-negativo para calcular o fatorial (N!): ");
+    scanf("%d", &n);
+
+    // Tratamento de entrada inválida (números negativos)
+    if (n < 0) {
+        printf("Erro: Não existe fatorial de número negativo!\n");
+        return 1; // Encerra o programa com código de erro
+    }
+
+    // Cálculo do fatorial para N >= 0 (Trata 0! e 1! automaticamente, pois o laço não inicia)
+    for (int i = 1; i <= n; i++) {
+        fatorial *= i;
+    }
+
+    // Exibição do resultado utilizando %lld para long long int
+    printf("%d! = %lld\n", n, fatorial);
+
+    return 0;
+}

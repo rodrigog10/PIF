@@ -25,11 +25,13 @@ return 0;
 }
 
 a) Por que o compilador emitirá um erro de compilação na instrução printf final?
+
     Por conta da variável soma, ela está definida dentro do for, ou seja,
     ela é uma variável exclusiva desse for e não pode ser acessada fora dele.
 
 b) Quais iterações do laço serão efetivamente executadas e qual o impacto dos comandos continue e
 break no fluxo?
+
     A contagem apenas
 
 c) Reescreva o código corrigindo o escopo de 'soma' e apresente o resultado que será impresso no
