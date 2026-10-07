@@ -3,7 +3,7 @@
 
 > **Repositório:** utilizar o mesmo repositório do GitHub criado para a Lista 1.  
 > **Pasta:** `/Lista-Cap2`  
-> **Arquivo:** `respostas.md`
+> **Arquivo:** `RespostasTeoricas.md`
 
 ---
 
@@ -89,7 +89,7 @@ a = 1, b = 2, c = 3, d = 4
 
 ### 1. `a += b + c`
 
-```text
+`gig``text
 b + c = 2 + 3 = 5
 a = 1 + 5 = 6
 ```
@@ -1002,4 +1002,4 @@ seu-repositorio/
     └── exercicio28.c
 ```
 
-**Observação:** `respostas.md` contém as respostas teóricas e também os códigos das questões práticas como referência. Para a entrega, os códigos das questões práticas devem ser colocados nos respectivos arquivos `.c`, diretamente dentro de `/Lista-Cap2`, conforme as regras da atividade.
+**Observação:** `RespostasTeoricas.md` contém as respostas teóricas e também os códigos das questões práticas como referência. Para a entrega, os códigos das questões práticas devem ser colocados nos respectivos arquivos `.c`, diretamente dentro de `/Lista-Cap2`, conforme as regras da atividade.

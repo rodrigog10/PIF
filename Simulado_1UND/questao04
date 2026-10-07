@@ -34,3 +34,5 @@ Questão 04. Avaliação de Expressões Lógicas, Relacionais e Precedência (Ca
                 -> !(i == j) é !(2 == 3), dentro do parenteses é falso porém ele nega o falso, virando verdadeiro.
                 -> (5.0 / 2.5 == 2) verdadeiro.
 
+        e)  1 (verdadeiro), porque a condição OU permite que pelo menos 1 seja verdadeira.
+
